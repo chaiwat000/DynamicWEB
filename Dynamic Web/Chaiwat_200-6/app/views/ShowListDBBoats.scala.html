@@ -1,0 +1,29 @@
+@(boats: List[Boats])
+<html>
+    <head></head>
+    <body>
+        <div class="container">
+            <h1>Database Boats</h1>
+            <br>
+            <a href="/newBoats">เพิ่มข้อมูลใน Database</a>
+            <table class="table table-striped ">
+                <tr>
+                    <th>รหัสเรือ</th>
+                    <th>ชื่อเรือ</th>
+                    <th>ปีที่ผลิต</th>
+                    <th>เมืองที่ผลิต</th>
+                    <th>ราคา</th>
+                </tr>
+                @for(boat<-boats){
+                    <tr>
+                        <td>@boat.getId</td>
+                        <td>@boat.getName()</td>
+                        <td>@boat.getYear()</td>
+                        <td>@boat.getCountry()</td>
+                        <td>@boat.getPrice()</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>

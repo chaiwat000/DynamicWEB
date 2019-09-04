@@ -1,0 +1,59 @@
+@(boats : List[YachtBoat])
+<html>
+    <head>
+        <style>
+            body{
+                background-size: cover;
+                background-position: center center;
+                color: #ffffff;
+            }
+            tr{
+                -webkit-box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+                box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+                text-align: center;
+            }
+            h1{
+                color: #f8f9fa;
+            }
+            td{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body background="/assets/images/boat1.jpg">
+        <h1 style="text-align: center"><B>List To Boat</B></h1>
+        <table class="table table-striped ">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Since</th>
+                <th>Country</th>
+                <th>Price</th>
+                <th>ที่นั่ง</th>
+                <th>จำนวนชั้น</th>
+                <th>ประเภท</th>
+                <th>น้ำหนัก</th>
+                <th>ระดับความสะดวกสบาย</th>
+                <th>ความเร็วของเรือ</th>
+            </tr>
+            <tr>
+                @for(boat<-boats){
+                    <tr>
+                        <td>@boat.getId()</td>
+                        <td>@boat.getName()</td>
+                        <td>@boat.getYear()</td>
+                        <td>@boat.getContry()</td>
+                        <td>@boat.getPrice()</td>
+                        <td>@boat.getSeat_amount()</td>
+                        <td>@boat.getFloors_amount()</td>
+                        <td>@boat.getType()</td>
+                        <td>@boat.getWeight()</td>
+                        <td>@boat.getEasinesslevel</td>
+                        <td>@boat.getSpeed_boat</td>
+                    </tr>
+                }
+
+        </table>
+    </body>
+</html>

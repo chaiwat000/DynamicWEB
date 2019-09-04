@@ -1,0 +1,27 @@
+@(boats : Form[Boats])
+@import helper._;
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Boat To Database</h1>
+        @helper.form(action = routes.Application.createBoats()){
+            @inputText(boats("id"),'_label->"ID",'placeholder->"รหัสเรือ",'required->"requrid",'class->"form-control")
+            @inputText(boats("name"),'_label->"Name",'placeholder->"ชื่อเรือ",'class->"form-control")
+            @inputText(boats("year"),'_label->"Year",'placeholder->"ปีที่ผลิต",'class->"form-control")
+            @inputText(boats("country"),'_label->"Country",'placeholder->"เมืองที่ผลิต",'class->"form-control")
+            @inputText(boats("price"),'_label->"Price",'placeholder->"ราคา",'class->"form-control")
+            <div class="container">
+                <button class="btn btn-success" type="submit">บันทึก</button>
+                <button class="btn btn-danger" type="reset">ยกเลิก</button>
+            </div>
+        }
+
+        </div>
+        <div class="container">
+            <a href="/ListBoats">เพิ่มข้อมูลใน Database</a>
+        </div>
+    </body>
+</html>

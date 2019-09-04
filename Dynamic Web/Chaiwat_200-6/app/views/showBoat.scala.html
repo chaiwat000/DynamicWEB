@@ -1,0 +1,54 @@
+@(boat : YachtBoat )
+<html>
+    <head>
+        <style>
+        body{
+            background-size: cover;
+            background-position: center center;
+            color: #1d2124;
+        }
+        tr{
+            -webkit-box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+            box-shadow: -1px -1px 39px 0px rgba(0,0,0,0.75);
+        }
+        h1{
+            text-align: center;
+        }
+            th{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body background="/assets/images/boat4.jpg">
+        <h1>My Boat</h1><br>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Since</th>
+                <th>Contry</th>
+                <th>Price</th>
+                <th>ที่นั่ง</th>
+                <th>จำนวนชั้น</th>
+                <th>ประเภท</th>
+                <th>น้ำหนัก</th>
+                <th>ระดับความสะดวกสบาย</th>
+                <th>ความเร็วของเรือ</th>
+            </tr>
+            <tr>
+                <th>@boat.getId()</th>
+                <th>@boat.getName()</th>
+                <th>@boat.getYear()</th>
+                <th>@boat.getContry()</th>
+                <th>@boat.getPrice()</th>
+                <th>@boat.getSeat_amount()</th>
+                <th>@boat.getFloors_amount()</th>
+                <th>@boat.getType()</th>
+                <th>@boat.getWeight()</th>
+                <th>@boat.getEasinesslevel</th>
+                <th>@boat.getSpeed_boat</th>
+            </tr>
+        </table>
+    </body>
+</html>

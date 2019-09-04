@@ -1,0 +1,92 @@
+@()
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap-4.1.3-dist/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+        <title>Exercise 5</title>
+        <style>
+            body{
+                background-size: cover;
+                background-position: center center;
+            }
+
+            label {
+                margin-top: 3px;
+                text-align: center;
+                font-size: 20px;
+                font-family: 'Mitr', sans-serif;
+            }
+            h1 {
+                text-align: center;
+                font-family: 'Mitr', sans-serif;
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body background="/assets/images/w1.jpg">
+        <div class="container">
+            <h1>ข้อมูลเรือ</h1><br>
+            <form action="/showboatform " method="post">
+                <div class="form-group">
+                    <label>รหัสเรือ </label>
+                    <input type="text" class="form-control" name="bid" placeholder="รหัสเรือ" width="300px" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label>ชื่อเรือ </label>
+                    <input type="text" class="form-control" name="bname" placeholder="ชื่อเรือ"  required>
+                </div>
+                <div class="form-group">
+                    <label>ปีที่ผลิต </label>
+                    <input type="text" class="form-control" name="byear" placeholder="ปีที่ผลิต" required>
+                </div>
+                <div class="form-group">
+                    <label>เมืองที่ผลิต </label>
+                    <input type="text" class="form-control" name="bcontry" placeholder="เมืองที่ผลิต"  required>
+                </div>
+                <div class="form-group">
+                    <label>ราคา </label>
+                    <input type="text" class="form-control" name="bprice" placeholder="ราคา" required>
+                </div>
+                <div class="form-group">
+                    <label>จำนวนที่นั่ง </label>
+                    <input type="text" class="form-control" name="sit_amount" placeholder="จำนวนที่นั่ง" required>
+                </div>
+                <div class="form-group">
+                    <label>จำนวนชั้น </label>
+                    <input type="text" class="form-control" name="floor_amount" placeholder="จำวนวชั้น"  required>
+                </div>
+                <div class="form-group">
+                    <label>ประเภท </label>
+                    <select name="btype" class="form-control">
+                        <option value="เรือยอร์ช">เรือยอร์ช</option>
+                        <option value="เรือสำราญ">เรือสำราญ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>น้ำหนัก </label>
+                    <input type="text" class="form-control" name="bweight" placeholder="น้ำหนัก"  required>
+                </div>
+                <div class="form-group">
+                    <label>ระดับความสะดวกสบาย </label>
+                    <select name="blevel" class="form-control" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ความเร็วของเรือ </label>
+                    <input type="text" class="form-control" name="bspeed" placeholder="ความเร็วของเรือ"  required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <div colspan="2" align="center">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

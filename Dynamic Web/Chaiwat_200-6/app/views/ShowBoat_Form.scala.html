@@ -1,0 +1,76 @@
+@(showboat : YachtBoat)
+<html>
+    <head>
+        <style>
+        body{
+            background-size: cover;
+            background-position: center center;
+        }
+            tr{
+                text-align: center;
+            }
+            th{
+                text-align: center;
+            }
+            table{
+                -webkit-box-shadow: -1px 0px 42px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: -1px 0px 42px 0px rgba(0,0,0,0.75);
+                box-shadow: -1px 0px 42px 0px rgba(0,0,0,0.75);
+
+                margin-top: 50px;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body background="/assets/images/boat3.jpg">
+        <h1>ข้อมูลประเภทเรือ</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>รหัสเรือ</th>
+                <th>@showboat.getId()</th>
+            </tr>
+            <tr>
+                <th>ชื่อเรือ</th>
+                <th>@showboat.getName()</th>
+            </tr>
+            <tr>
+                <th>ปีที่ผลิต</th>
+                <th>@showboat.getYear()</th>
+            </tr>
+            <tr>
+                <th>เมืองที่ผลิต</th>
+                <th>@showboat.getContry()</th>
+            </tr>
+            <tr>
+                <th>ราคา</th>
+                <th>@showboat.getPrice()</th>
+            </tr>
+            <tr>
+                <th>จำนวนที่นั่ง</th>
+                <th>@showboat.getSeat_amount()</th>
+            </tr>
+            <tr>
+                <th>จำนวนชั้น</th>
+                <th>@showboat.getFloors_amount()</th>
+            </tr>
+            <tr>
+                <th>ประเภท</th>
+                <th>@showboat.getType()</th>
+            </tr>
+            <tr>
+                <th>น้ำหนัก</th>
+                <th>@showboat.getWeight()</th>
+            </tr>
+            <tr>
+                <th>ระดับความสบาย</th>
+                <th>@showboat.getEasinesslevel()</th>
+            </tr>
+            <tr>
+                <th>ความเร็วของเรือ</th>
+                <th>@showboat.getSpeed_boat()</th>
+            </tr>
+        </table>
+    </body>
+</html>

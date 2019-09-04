@@ -1,0 +1,67 @@
+ @(boatHelper : Form[YachtBoat])
+@import helper._;
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Helper Boat Form</h1><br>
+            @helper.form(action = routes.Application.postHelper()){
+                <div class="row">
+                    <div class="col-md-6">
+                    @inputText(boatHelper("Id"),'_label->"รหัสเรือ",'placeholder->"รหัสเรือ",'required->"required",'class->"form-control")
+                    </div>
+                    <div class="col-md-6">
+                    @inputText(boatHelper("Name"),'_label->"ชื่อเรือ",'placeholder->"ชื่อเรือ",'required->"required",'class->"form-control")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Contry"),'_label->"เมืองที่ผลิต",'placeholder->"เมืองที่ผลิต",'required->"required",'class->"form-control")
+                    </div>
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Year"),'_label->"ปีที่ผลิต",'placeholder->"ปีที่ผลิต",'required->"required",'class->"form-control")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Price"),'_label->"ราคา",'placeholder->"ราคา",'required->"required",'class->"form-control")
+                    </div>
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Seat_amount"),'_label->"จำนวนที่นั่ง",'placeholder->"จำนวนที่นั่ง",'required->"required",'class->"form-control")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Floors_amount"),'_label->"จำนวนชั้น",'placeholder->"จำนวนชั้น",'required->"required",'class->"form-control")
+                    </div>
+                    <div class="col-md-6">
+                        @select(boatHelper("Type"),options = Seq("เรือยอร์ช"->"เรือยอร์ช","เรือสำราญ"->"เรือสำราญ"),'_label->"ประเภทเรือ",'class->"form-control")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Weight"),'_label->"น้ำหนัก",'placeholder->"น้ำหนัก",'required->"required",'class->"form-control")
+                    </div>
+                    <div class="col-md-6">
+                        @select(boatHelper("Easinesslevel"),options = Seq("1"->"1","2"->"2","3"->"3","4"->"4","5"->"5"),'class->"form-control",'_label->"ความสะดวกสบาย")
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @inputText(boatHelper("Speed_boat"),'_label->"ความเร็ว",'placeholder->"ความเร็ว",'required->"required",'class->"form-control")
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit"  class="btn btn-success">บันทึก</button>
+                        <button type="reset"  class="btn btn-danger">ยกเลิก</button>
+                    </div>
+                </div>
+        }
+        </div>
+    </body>
+</html>

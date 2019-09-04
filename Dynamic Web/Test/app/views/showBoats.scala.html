@@ -1,0 +1,30 @@
+@(boats : Boats)
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <table class="table table-striped">
+            <tr>
+                <th>รหัสเรือ</th>
+                <th>ชื่อเรือ</th>
+                <th>ราคา</th>
+                <th>เมืองที่ผลิต</th>
+                <th>ประเภทเรือ</th>
+                <th>ปีที่ผลิต</th>
+                <th>ที่นั่ง</th>
+                <th>ความเร็ว</th>
+            </tr>
+            <tr>
+                <th>@boats.getId()</th>
+                <th>@boats.getName()</th>
+                <th>@boats.getPrice()</th>
+                <th>@boats.getCountry()</th>
+                <th>@boats.getType()</th>
+                <th>@boats.getYear()</th>
+                <th>@boats.getSeat()</th>
+                <th>@boats.getSpeed()</th>
+            </tr>
+        </table>
+    </body>
+</html>
